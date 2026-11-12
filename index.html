@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #111b21;
+    background: #fff;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    min-height: 65px;
+    padding: 10px 3.2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.logo {
+    color: #25d366;
+    font-size: 21px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: #111;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #25d366;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-btn {
+    padding: 11px 22px;
+    border: 1px solid #111b21;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.download-btn {
+    background: #25d366;
+    border-color: #111b21;
+}
+
+/* MAIN CONTENT */
+
+.main-section {
+    width: 100%;
+    min-height: 463px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 65px 20px 50px;
+}
+
+.channel-content {
+    width: 100%;
+    max-width: 550px;
+}
+
+.channel-logo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+
+.channel-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111b21;
+    margin-bottom: 5px;
+}
+
+.channel-content p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #111b21;
+}
+
+.channel-btn {
+    display: inline-block;
+    margin-top: 17px;
+    padding: 13px 27px;
+    background: #25d366;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #111b21;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+     animation: zoomEffect 1.2s infinite ease-in-out;
+}
+
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.10);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.channel-btn:hover,
+.download-btn:hover {
+    background: #1ebe5d;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #111b21;
+    color: #fff;
+    padding: 88px 6% 55px;
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-size: 23px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-download {
+    display: inline-block;
+    background: #25d366;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 60px;
+}
+
+.footer-column h4 {
+    color: #b5bfc4;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 20px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #25d366;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: span 3;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-download {
+        margin-top: 0;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .header {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .header-buttons {
+        gap: 8px;
+    }
+
+    .header-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+
+    .main-section {
+        min-height: 450px;
+        padding: 55px 15px;
+    }
+
+    .channel-logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .channel-content h1 {
+        font-size: 25px;
+    }
+
+    .channel-content p {
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    .channel-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 55px 25px 35px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .footer-download {
+        margin-top: 0;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 22px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 16px;
+    }
+
+    .footer-column ul li a {
+        font-size: 14px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .header-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .channel-content h1 {
+        font-size: 22px;
+    }
+
+    .footer-container {
+        gap: 30px 12px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="logo2.png" alt="WhatsApp">
+        
+    </a>
+
+    <nav class="nav-menu">
+        <a href="#">Features</a>
+        <a href="#">Privacy</a>
+        <a href="#">Blog</a>
+        <a href="#">Apps</a>
+        <a href="#">Help Center</a>
+        <a href="#">For Business</a>
+    </nav>
+
+    <div class="header-buttons">
+        <a href="#" class="header-btn">Log In</a>
+        <a href="#" class="header-btn download-btn">
+            Download
+        </a>
+    </div>
+
+</header>
+
+
+<!-- MAIN SECTION -->
+
+<section class="main-section">
+
+    <div class="channel-content">
+
+        <!-- Your Channel Logo -->
+        <img src="lk.jpg" class="channel-logo" alt="Channel Logo">
+
+        <h1>ROCKY BHAI PREDICTION</h1>
+
+        <p>All game blast sensax</p>
+
+        <p>Taiwan kospi hang Seng dax dawzone</p>
+
+        <p>Channel • 1.2K followers</p>
+
+        <a href="https://www.whatsapp.com/channel/0029Vb9ifmC2f3EH7Qh3fX2O"
+           target="_blank"
+           class="channel-btn">
+            View in WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="#" class="footer-logo">
+                <img src="logo3.png" alt="WhatsApp">
+                
+            </a>
+
+            <a href="https://www.whatsapp.com/channel/0029Vb9ifmC2f3EH7Qh3fX2O" class="footer-download">
+                Download　
+            </a>
+
+        </div>
+
+
+        <!-- COLUMN 1 -->
+
+        <div class="footer-column">
+
+            <h4>What we do</h4>
+
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">For Business</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- COLUMN 2 -->
+
+        <div class="footer-column">
+
+            <h4>Who we are</h4>
+
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Brand Center</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- COLUMN 3 -->
+
+        <div class="footer-column">
+
+            <h4>Use WhatsApp</h4>
+
+            <ul>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Desktop</a></li>
+                <li><a href="#">Tablet</a></li>
+                <li><a href="#">WhatsApp Web</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- COLUMN 4 -->
+
+        <div class="footer-column">
+
+            <h4>Need help?</h4>
+
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Apps</a></li>
+                <li><a href="#">Security Advisories</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
